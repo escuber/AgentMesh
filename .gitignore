@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/__pycache__/*
+/.vs
+/tts-service/agent_tts/models/__pycache__
+/tts-service/agent_tts/orpheus/__pycache__
+/tts-service/agent_tts/orpheus/inference.py
+/tts-service/agent_tts/workers/__pycache__
+/tts-service/agent_tts/__pycache__
+/venv/Lib/site-packages/annotated_doc/__pycache__
+/venv
