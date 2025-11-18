@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+
+  tts-service:
+    build: ./tts-service
+    ports:
+      - "8099:8099"
+    environment:
+      LMSTUDIO_URL: "http://host.docker.internal:1234"
+      LMSTUDIO_MODEL: "qwen2.5"
+    depends_on:
+      - lmstudio
+
+  vision-service:
+    build: ./vision-service
+    ports:
+      - "8101:8101"
+
+  form-agent:
+    build: ./form-agent
+    ports:
+      - "8102:8102"
+
+  job-agent:
+    build: ./job-agent
+    ports:
+      - "8103:8103"
+
+  lmstudio:
+    image: lmstudio-ai/server:latest
+    ports:
+      - "1234:1234"
